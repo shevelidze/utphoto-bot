@@ -33,6 +33,7 @@ def send_UTF_art(message):
     )
     array = numpy.asarray(bytearray(request.read()), dtype=numpy.uint8)
     image = cv2.imdecode(array, cv2.IMREAD_GRAYSCALE)
-    print(image)
+    print(type(image))
+    print(image.shape)
 
 bot.infinity_polling()
